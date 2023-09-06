@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="262.0" layoutY="219.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="117.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20;" text="체크">
+         <font>
+            <Font name="Apple Symbols" size="21.0" />
+         </font>
+      </Button>
+      <Button layoutX="522.0" layoutY="1024.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="266.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20;" text="체크">
+         <font>
+            <Font name="Apple Symbols" size="53.0" />
+         </font>
+      </Button>
+      <TextField layoutX="16.0" layoutY="230.0" prefHeight="66.0" prefWidth="231.0" promptText="Name">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="66.0" fitWidth="165.0" layoutX="118.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/Logo.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="122.0" layoutY="1196.0" prefHeight="106.0" prefWidth="569.0" promptText="Password">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="120.0" layoutY="1373.0" prefHeight="106.0" prefWidth="569.0" promptText="Password">
+         <font>
+            <Font size="70.0" />
+         </font>
+      </TextField>
+      <Button layoutX="130.0" layoutY="713.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="169.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20;" text="가입하기">
+         <font>
+            <Font name="Apple Symbols" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="160.0" fitWidth="101.0" layoutX="158.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/로고.png" />
+         </image>
+      </ImageView>
+      <CheckBox layoutX="26.0" layoutY="640.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="326.0" text="비밀유지를 약속합니다">
+         <font>
+            <Font name="Arial Black" size="25.0" />
+         </font>
+      </CheckBox>
+   </children>
+</Pane>
