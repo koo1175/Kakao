@@ -10,8 +10,8 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField layoutX="69.0" layoutY="304.0" prefHeight="42.0" prefWidth="238.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-border-color: #FF0000; -fx-border-image-width: 1; -fx-border-radius: 20;" />
-      <TextField layoutX="69.0" layoutY="374.0" prefHeight="42.0" prefWidth="238.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-border-color: #FF0000; -fx-border-image-width: 1; -fx-border-radius: 20;" />
+      <TextField layoutX="69.0" layoutY="304.0" prefHeight="42.0" prefWidth="238.0" promptText="ID" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15; -fx-border-color: #FF0000; -fx-border-image-width: 1; -fx-border-radius: 20;" />
+      <TextField layoutX="69.0" layoutY="374.0" prefHeight="42.0" prefWidth="238.0" promptText="PassWord" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-border-color: #FF0000; -fx-border-image-width: 1; -fx-border-radius: 20;" />
       <Button layoutX="138.0" layoutY="462.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="101.0" style="-fx-background-color: #FF0000; -fx-background-radius: 20;" text="로그인" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="18.0" />
@@ -22,7 +22,7 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Text fill="#5783ff" layoutX="153.0" layoutY="659.0" strokeType="OUTSIDE" strokeWidth="0.0" text="회원 가입하러 가기 &gt;&gt;">
+      <Text fill="#5783ff" layoutX="153.0" layoutY="659.0" onMouseClicked="#gotoSignup" strokeType="OUTSIDE" strokeWidth="0.0" text="회원 가입하러 가기 &gt;&gt;">
          <font>
             <Font size="19.0" />
          </font>
