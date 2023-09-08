@@ -21,11 +21,11 @@ public class MainController {
 	@FXML
 	private TextField usernameField;
 
-	@FXML // 첫화면로그인버툰
+	@FXML // 첫화면 로그인 버튼
 	void gotoMain(MouseEvent event) throws IOException {
 		
 		if(usernameField.getText().equals("a")&&passwordField.getText().equals("a")) {
-			sgt.nextScene2(event, "/application/ChatList.fxml");
+			sgt.nextScene2(event, "/application/FriendList.fxml");
 		}
 		else {
 			System.out.println("다시 입력하세요");
