@@ -29,7 +29,7 @@ public class ChatRoomController {
 
 	@FXML
 	void gotoMain(MouseEvent event) throws IOException {
-		sgt.nextScene2(event, "ChatList.fxml");
+		sgt.nextScene2(event, "/application/ChatList.fxml");
 	}
 
 	@FXML

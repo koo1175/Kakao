@@ -27,7 +27,7 @@ public class ChatListController {
 	    @FXML
 	    void gotoPlusChat(MouseEvent event) {
 	        try {
-	            FXMLLoader loader = new FXMLLoader(getClass().getResource("ChatRoom.fxml"));
+	            FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/ChatRoom.fxml"));
 	            Parent root = loader.load();
 	            ChatRoomController controller = loader.getController();
 

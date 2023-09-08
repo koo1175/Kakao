@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
 public class EditMyProfileController {
@@ -27,7 +28,20 @@ public class EditMyProfileController {
 	@FXML
 	private ImageView reName;
 	
+	@FXML
+	private Pane Popup;
 	
+	@FXML
+	private Text No;
+	
+	@FXML
+	private Text Yes;
+	
+	@FXML
+	private ImageView CloseEditMyProfile;
+	
+	@FXML
+	private Pane PopupBack;
 
 	@FXML
 	//처음에 이름 설정 불가능
@@ -37,7 +51,7 @@ public class EditMyProfileController {
 	}
 
 	@FXML
-	void gotoProfile(MouseEvent event) throws IOException {
+	void gotoMyProfile(MouseEvent event) throws IOException {
 		nameBar.setEditable(false);
 		messageBar.setEditable(false);
 		sgt.nextScene2(event, "/application/MyProfile.fxml");
@@ -53,5 +67,12 @@ public class EditMyProfileController {
 	void reName(MouseEvent event) throws IOException {
 		nameBar.setEditable(true);
 	}
+	
+	@FXML
+	 void CallPopup(MouseEvent event) throws IOException {
+        Popup.setVisible(true);
+        PopupBack.setVisible(true);
+	}
+
 
 }
