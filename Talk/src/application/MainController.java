@@ -8,7 +8,7 @@ import javafx.scene.text.Text;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class MainController {
+public class MainController {		
 
 	private Singleton sgt = Singleton.getInstance(); // 싱글톤
 
