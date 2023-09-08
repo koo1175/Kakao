@@ -1,5 +1,7 @@
 package application;
 
+import java.io.IOException;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -7,7 +9,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
 public class EditMyProfileController {
-
+	
+	private Singleton sgt = Singleton.getInstance();
+	
 	@FXML
 	private Text finish;
 
@@ -33,19 +37,20 @@ public class EditMyProfileController {
 	}
 
 	@FXML
-	void gotoProfile(MouseEvent event) {
+	void gotoProfile(MouseEvent event) throws IOException {
 		nameBar.setEditable(false);
 		messageBar.setEditable(false);
+		sgt.nextScene2(event, "/application/MyProfile.fxml");
 		
 	}
 
 	@FXML
-	void reMessage(MouseEvent event) {
-
+	void reMessage(MouseEvent event) throws IOException {
+		messageBar.setEditable(true);
 	}
 
 	@FXML
-	void reName(MouseEvent event) {
+	void reName(MouseEvent event) throws IOException {
 		nameBar.setEditable(true);
 	}
 
