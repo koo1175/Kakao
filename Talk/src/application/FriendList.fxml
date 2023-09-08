@@ -67,22 +67,22 @@
             </Text>
             <ImageView fitHeight="35.0" fitWidth="101.0" layoutX="3.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Image/Logo.png.png" />
+                  <Image url="@Image/Logo.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/Talk/이미지/옵션.png.png" />
+                  <Image url="@Image/옵션.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="285.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/Talk/이미지/채팅%20추가.png.png" />
+                  <Image url="@Image/채팅%20추가.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="239.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/Talk/이미지/검색.png.png" />
+                  <Image url="@Image/검색.png" />
                </image>
             </ImageView>
             <Pane layoutY="97.0" prefHeight="89.0" prefWidth="375.0">

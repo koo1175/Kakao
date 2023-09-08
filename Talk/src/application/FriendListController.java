@@ -12,9 +12,18 @@ public class FriendListController {
 	
 	@FXML
     private ImageView gotoChattinglist;
+	
+    @FXML
+    private ImageView OpenChat;
 
     @FXML
     void gotoChattingList(MouseEvent event) throws IOException {
-    	sgt.nextScene2(event, "/application/ChattingList");
+    	sgt.nextScene2(event, "/application/Chatroom.fxml");
     }
+    
+    @FXML
+    void gotoOpenChat(MouseEvent event) throws IOException {
+    	sgt.nextScene2(event, "OpenChatting.fxml");
+    }
+    
 }
