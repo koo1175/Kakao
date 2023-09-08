@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyProfileController">
    <children>
       <ImageView fitHeight="812.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -27,7 +27,7 @@
             </Text>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="27.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Image/camera.png.png" />
+                  <Image url="@Image/camera.png" />
                </image>
             </ImageView>
          </children>
@@ -36,7 +36,7 @@
          <children>
             <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="20.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Image/닫기.png.png" />
+                  <Image url="@Image/닫기.png" />
                </image>
             </ImageView>
          </children>
@@ -53,19 +53,19 @@
       </TextField>
       <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="350.0" layoutY="610.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/프로필%20편집.png.png" />
+            <Image url="@Image/프로필%20편집.png" />
          </image>
       </ImageView>
       <Line endX="347.8332824707031" layoutX="17.0" layoutY="642.0" startX="-7.5000200271606445" stroke="WHITE" strokeWidth="0.5" />
       <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="350.0" layoutY="660.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/프로필%20편집.png.png" />
+            <Image url="@Image/프로필%20편집.png" />
          </image>
       </ImageView>
       <Line endX="347.8332824707031" layoutX="17.0" layoutY="688.0" startX="-7.5000200271606445" stroke="WHITE" strokeWidth="0.5" />
       <Pane layoutX="315.0" prefHeight="60.0" prefWidth="60.0">
          <children>
-            <Text fill="WHITE" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="완료" textAlignment="CENTER">
+            <Text fx:id="완료" fill="WHITE" layoutX="10.0" layoutY="40.0" onMouseClicked="#gotoProfile" strokeType="OUTSIDE" strokeWidth="0.0" text="완료" textAlignment="CENTER">
                <font>
                   <Font name="Arial Black" size="20.0" />
                </font>
@@ -88,7 +88,7 @@
             </ImageView>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="71.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Image/camera.png.png" />
+                  <Image url="@Image/camera.png" />
                </image>
             </ImageView>
          </children>

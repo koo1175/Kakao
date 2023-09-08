@@ -14,8 +14,6 @@ public class ChatRoomController {
 
 	private Singleton sgt = Singleton.getInstance(); // 싱글톤
 
-//	@FXML
-//	private VBox ChatField;
 
 	@FXML
 	private TextArea ChatField;
