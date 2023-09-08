@@ -179,5 +179,24 @@
             </Pane>
          </children>
       </Pane>
+      <Pane layoutX="-2.0" layoutY="249.0" prefHeight="89.0" prefWidth="375.0">
+         <children>
+            <Text layoutX="103.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="친구 이름">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="66.0" fitWidth="66.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/angry-face(2).png" />
+               </image>
+            </ImageView>
+            <Text layoutX="103.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="소개">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
    </children>
 </Pane>
