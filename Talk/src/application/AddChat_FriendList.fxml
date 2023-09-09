@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812.0" prefWidth="375.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddChatFriendListController">
+   <children>
+      <ImageView fx:id="Back" fitHeight="25.0" fitWidth="25.0" layoutX="13.0" layoutY="14.0" onMouseClicked="#gotoChattingList" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/back.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="SearchBar" layoutX="13.0" layoutY="55.0" onMouseClicked="#toWrite" prefHeight="38.0" prefWidth="348.0" promptText="이름, 전화번호 검색" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #FF0000; -fx-border-width: 0.2;">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </TextField>
+      <Text layoutX="69.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="대화 상대 초대">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Text>
+      <ListView layoutY="103.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="375.0" style="-fx-background-color: #FFFFFF;" />
+      <Text fx:id="Done" layoutX="315.0" layoutY="34.0" onMouseClicked="#gotoChatRoom" strokeType="OUTSIDE" strokeWidth="0.0" text="완료">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
