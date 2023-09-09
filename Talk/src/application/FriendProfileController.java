@@ -30,17 +30,17 @@ public class FriendProfileController {
 
     @FXML // 친구 배경 이미지 보기
     void gotoFriendImageView(MouseEvent event) throws IOException {
-    	sgt.nextScene(event, "/application/FriendImageView.fxml");
+    	sgt.nextScene2(event, "/application/FriendImageView.fxml");
     }
 
     @FXML // 친구 프로필 사진 보기
     void gotoFriendList(MouseEvent event) throws IOException {
-    	sgt.nextScene(event, "/application/FriendList.fxml");
+    	sgt.nextScene2(event, "/application/FriendList.fxml");
     }
 
     @FXML
     void gotoFriendProfile_ImageView(MouseEvent event) throws IOException {
-    	sgt.nextScene(event, "/application/FriendProfile_ImageView.fxml");
+    	sgt.nextScene2(event, "/application/FriendProfile_ImageView.fxml");
     }
 
 }

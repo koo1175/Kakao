@@ -42,7 +42,7 @@
          <children>
             <Accordion layoutY="186.0" style="-fx-background-color: #FFFFFF;">
               <panes>
-                <TitledPane animated="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="375.0" style="-fx-background-color: #FFFFFF;" text="즐겨찾기">
+                <TitledPane animated="false" minWidth="-Infinity" prefHeight="300.0" prefWidth="375.0" style="-fx-background-color: #FFFFFF;" text="즐겨찾기">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
@@ -50,12 +50,12 @@
                         <ListView maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="375.0" style="-fx-background-color: #FFFFFF;" />
                      </content>
                   </TitledPane>
-                <TitledPane animated="false" minWidth="-Infinity" prefHeight="180.0" prefWidth="297.0" style="-fx-background-color: #FFFFFF;" text="친구">
+                <TitledPane animated="false" minWidth="-Infinity" prefHeight="550.0" prefWidth="375.0" style="-fx-background-color: #FFFFFF;" text="친구">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                      <content>
-                        <ListView maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="375.0" style="-fx-background-color: #FFFFFF;" />
+                        <VBox fx:id="List" prefHeight="7.0" prefWidth="373.0" />
                      </content>
                   </TitledPane>
               </panes>
@@ -75,9 +75,9 @@
                   <Image url="@Image/옵션.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="NewChat" fitHeight="30.0" fitWidth="30.0" layoutX="285.0" layoutY="14.0" onMouseClicked="#toggleVisibility" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="toggleVisibility" fitHeight="30.0" fitWidth="30.0" layoutX="284.0" layoutY="15.0" onMouseClicked="#AddFriend" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Image/채팅%20추가.png" />
+                  <Image url="@Image/친구%20추가.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="239.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
@@ -175,6 +175,25 @@
                         </ImageView>
                      </children>
                   </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="Friend" layoutX="-7.0" layoutY="424.0" prefHeight="89.0" prefWidth="375.0" visible="false">
+               <children>
+                  <Text layoutX="103.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="친구 이름">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="66.0" fitWidth="66.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Image/angry-face(2).png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="103.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="소개">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Text>
                </children>
             </Pane>
          </children>

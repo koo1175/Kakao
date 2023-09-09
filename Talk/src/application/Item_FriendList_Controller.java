@@ -15,7 +15,7 @@ public class Item_FriendList_Controller {
 
     @FXML // 친구 목록에 있는 친구를 클릭 -> 친구의 프로필보기
     void gotoFriendProfile_ImageView(MouseEvent event) throws IOException {
-    	sgt.nextScene(event, "/application/FriendProfile.fxml");
+    	sgt.nextScene2(event, "/application/FriendProfile.fxml");
     }
 
 }

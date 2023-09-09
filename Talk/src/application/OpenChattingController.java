@@ -69,12 +69,12 @@ public class OpenChattingController {
 
     @FXML // 채팅 목록 가기
     void gotoChattingList(MouseEvent event) throws IOException {
-    	sgt.nextScene(event, "/application/ChattingList.fxml");
+    	sgt.nextScene2(event, "/application/ChattingList.fxml");
     }
 
     @FXML // 친구 목록 가기
     void gotoFriendList(MouseEvent event) throws IOException {
-    	sgt.nextScene(event, "/application/FriendList.fxml");
+    	sgt.nextScene2(event, "/application/FriendList.fxml");
     }
 
 }

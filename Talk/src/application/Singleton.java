@@ -42,7 +42,7 @@ public class Singleton {
       stage.show();
    }
    
-   public void nextScene3(KeyEvent event, String name) throws IOException { // 키 이벤 시에 화면 넘기기
+   public void nextScene3(KeyEvent event, String name) throws IOException { //키보드 이벤 시에 화면 넘기기
 	      Parent root = FXMLLoader.load(getClass().getResource(name));
 	      Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 	      Scene scene = new Scene(root);
