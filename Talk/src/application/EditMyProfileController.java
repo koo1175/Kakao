@@ -10,9 +10,24 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
 public class EditMyProfileController {
-	
+
 	private Singleton sgt = Singleton.getInstance();
-	
+
+	@FXML
+	private ImageView CloseEditMyProfile;
+
+	@FXML
+	private Text No;
+
+	@FXML
+	private Pane Popup;
+
+	@FXML
+	private Pane PopupBack;
+
+	@FXML
+	private Text Yes;
+
 	@FXML
 	private Text finish;
 
@@ -27,24 +42,9 @@ public class EditMyProfileController {
 
 	@FXML
 	private ImageView reName;
-	
-	@FXML
-	private Pane Popup;
-	
-	@FXML
-	private Text No;
-	
-	@FXML
-	private Text Yes;
-	
-	@FXML
-	private ImageView CloseEditMyProfile;
-	
-	@FXML
-	private Pane PopupBack;
 
 	@FXML
-	//처음에 이름 설정 불가능
+	// 처음에 이름 설정 불가능
 	public void initialize() {
 		nameBar.setEditable(false);
 		messageBar.setEditable(false);
@@ -55,7 +55,7 @@ public class EditMyProfileController {
 		nameBar.setEditable(false);
 		messageBar.setEditable(false);
 		sgt.nextScene2(event, "/application/MyProfile.fxml");
-		
+
 	}
 
 	@FXML
@@ -67,12 +67,11 @@ public class EditMyProfileController {
 	void reName(MouseEvent event) throws IOException {
 		nameBar.setEditable(true);
 	}
-	
-	@FXML
-	 void CallPopup(MouseEvent event) throws IOException {
-        Popup.setVisible(true);
-        PopupBack.setVisible(true);
-	}
 
+	@FXML
+	void CallPopup(MouseEvent event) throws IOException {
+		Popup.setVisible(true);
+		PopupBack.setVisible(true);
+	}
 
 }

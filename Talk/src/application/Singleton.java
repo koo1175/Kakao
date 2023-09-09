@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -25,7 +26,7 @@ public class Singleton {
       return instance;
    }
 
-   public void nextScene(MouseEvent event, String name) throws IOException { // 액션 이벤트 시에 화면 넘기기
+   public void nextScene(ActionEvent event, String name) throws IOException { // 액션(버튼 등등) 이벤트 시에 화면 넘기기
       Parent root = FXMLLoader.load(getClass().getResource(name));
       Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
       Scene scene = new Scene(root);
@@ -40,4 +41,12 @@ public class Singleton {
       stage.setScene(scene);
       stage.show();
    }
+   
+   public void nextScene3(KeyEvent event, String name) throws IOException { // 키 이벤 시에 화면 넘기기
+	      Parent root = FXMLLoader.load(getClass().getResource(name));
+	      Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+	      Scene scene = new Scene(root);
+	      stage.setScene(scene);
+	      stage.show();
+	   }
 }

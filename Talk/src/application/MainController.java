@@ -3,12 +3,14 @@ package application;
 import java.io.IOException;
 
 import javafx.fxml.FXML;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 
-public class MainController {		
+public class MainController {
 
 	private Singleton sgt = Singleton.getInstance(); // 싱글톤
 
@@ -23,15 +25,25 @@ public class MainController {
 
 	@FXML // 첫화면 로그인 버튼
 	void gotoMain(MouseEvent event) throws IOException {
-		
-		if(usernameField.getText().equals("a")&&passwordField.getText().equals("a")) {
+
+		if (usernameField.getText().equals("a") && passwordField.getText().equals("a")) {
 			sgt.nextScene2(event, "/application/FriendList.fxml");
-		}
-		else {
+		} else {
 			System.out.println("다시 입력하세요");
 		}
-		
-		
+
+	}
+
+	@FXML
+	void success(KeyEvent event) throws IOException {
+		if (event.getCode() == KeyCode.ENTER) {
+			if (usernameField.getText().equals("a") && passwordField.getText().equals("a")) {
+				sgt.nextScene3(event, "/application/FriendList.fxml");
+			} else {
+				System.out.println("다시 입력하세요");
+			}
+			
+		}
 	}
 
 	@FXML // 회원가입 화면
