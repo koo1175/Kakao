@@ -66,7 +66,7 @@ public class FriendListController {
 
 	@FXML
 	void gotoChattingList(MouseEvent event) throws IOException {
-		sgt.nextScene2(event, "/application/Chatroom.fxml");
+		sgt.nextScene2(event, "/application/ChattingList.fxml");
 	}
 
 	@FXML
@@ -121,8 +121,8 @@ public class FriendListController {
 			Pane newFriend = new Pane();
 
 			// Copy the style and size of Friend pane to the new pane
-			newFriend.setStyle(Friend.getStyle());
-			newFriend.setPrefSize(Friend.getPrefWidth(), Friend.getPrefHeight());
+//			newFriend.setStyle(Friend.getStyle());
+			newFriend.setPrefSize(375, 89);
 
 			// Create and add a copy of FName to the new friend pane
 			Text newName = new Text(Fname.getText());
@@ -131,7 +131,18 @@ public class FriendListController {
 			newName.setLayoutX(Fname.getLayoutX()); // Ensure copied text is in same position as original text
 			newName.setLayoutY(Fname.getLayoutY()); // Ensure copied text is in same position as original text
 
+			ImageView newPicture = new ImageView(FPicture.getImage());
+			newPicture.setLayoutX(FPicture.getLayoutX()); // Ensure copied image is in the same position as original
+															// image
+			newPicture.setLayoutY(FPicture.getLayoutY());
 			// Do similar for FText and FPicture...
+
+			// Create and add a copy of FName to the new friend pane
+			Text newName2 = new Text(Fname.getText());
+			newName2.setFont(Fname.getFont());
+			newName2.setFill(Fname.getFill());
+			newName2.setLayoutX(Fname.getLayoutX()); // Ensure copied text is in same position as original text
+			newName2.setLayoutY(Fname.getLayoutY()); // Ensure copied text is in same position as original text
 
 			newFriend.getChildren().addAll(newName);
 

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FriendProfileController">
+   <children>
+      <ImageView fitHeight="812.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/background_gray.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <Pane fx:id="FriendImage" onMouseClicked="#gotoFriendImageView" prefHeight="812.0" prefWidth="375.0" style="-fx-background-color: #000000; -fx-opacity: 0.05;" />
+      <Line endX="375.0" layoutY="694.0" stroke="WHITE" />
+      <Pane fx:id="WithChat" layoutX="145.0" layoutY="712.0" onMouseClicked="#gotoChattingRoom" prefHeight="85.0" prefWidth="85.0">
+         <children>
+            <Text fill="WHITE" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 : 1 채팅하기">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="25.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/프로필%20채팅.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <ImageView fx:id="Close" fitHeight="20.0" fitWidth="20.0" layoutX="20.0" layoutY="20.0" onMouseClicked="#gotoFriendList" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/닫기.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fx:id="FriendProfileImage" fitHeight="100.0" fitWidth="100.0" layoutX="138.0" layoutY="500.0" onMouseClicked="#gotoFriendProfile_ImageView" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Image/angry-face(2).png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <effect>
+            <DropShadow height="26.46" offsetX="3.0" offsetY="3.0" radius="12.3375" width="24.89">
+               <color>
+                  <Color opacity="0.5012722611427307" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Text fill="WHITE" layoutY="660.0" strokeType="OUTSIDE" strokeWidth="0.0" text="상태 메세지" textAlignment="CENTER" wrappingWidth="376.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutY="627.0" strokeType="OUTSIDE" strokeWidth="0.0" text="이름" textAlignment="CENTER" wrappingWidth="376.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
