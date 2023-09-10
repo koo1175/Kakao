@@ -51,8 +51,18 @@ public class FriendListController {
 
 	@FXML // 친구 뜨는자리
 	private VBox List;
+
 	@FXML
 	private ImageView AddFriend;
+
+	@FXML
+	private Text FText;
+
+	@FXML
+	private Text Fname;
+
+	@FXML
+	private ImageView FPicture;
 
 	@FXML
 	void gotoChattingList(MouseEvent event) throws IOException {
@@ -103,17 +113,31 @@ public class FriendListController {
 		sgt.nextScene2(event, "/application/EditMyProfile.fxml");
 	}
 
-	@FXML // 채팅 추가하기 버튼 클릭 -> 일단 친구 목록 바로 보이게 FriendPane 생성
+	@FXML
 	void AddFriend(MouseEvent event) {
-		Pane newFriend = new Pane();
-		newFriend.setStyle(Friend.getStyle()); // Friend Pane의 스타일 복사
-		newFriend.setPrefSize(Friend.getPrefWidth(), Friend.getPrefHeight()); // Friend Pane의 크기 복사
+		// Ensure UI updates are run on the JavaFX Application Thread
+		javafx.application.Platform.runLater(() -> {
+			// Create a new Pane for the new friend
+			Pane newFriend = new Pane();
 
-		// 여기에 친구 정보를 표시하는 내용을 newFriend Pane에 추가합니다.
-		Text friendName = new Text("새로운 친구"); // 친구 이름을 나타내는 예제 텍스트
-		newFriend.getChildren().add(friendName);
+			// Copy the style and size of Friend pane to the new pane
+			newFriend.setStyle(Friend.getStyle());
+			newFriend.setPrefSize(Friend.getPrefWidth(), Friend.getPrefHeight());
 
-		// newFriend을 VBox(List)에 추가합니다.
-		List.getChildren().add(newFriend);
+			// Create and add a copy of FName to the new friend pane
+			Text newName = new Text(Fname.getText());
+			newName.setFont(Fname.getFont());
+			newName.setFill(Fname.getFill());
+			newName.setLayoutX(Fname.getLayoutX()); // Ensure copied text is in same position as original text
+			newName.setLayoutY(Fname.getLayoutY()); // Ensure copied text is in same position as original text
+
+			// Do similar for FText and FPicture...
+
+			newFriend.getChildren().addAll(newName);
+
+			// Add newly created friend pane to List VBox.
+			List.getChildren().add(newFriend);
+		});
 	}
+
 }
